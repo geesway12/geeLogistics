@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>geeLogistics</title>
+
+  <!-- PWA & Icons -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="geeLogistics" />
+
+  <!-- Styles -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* quick hero banner */
+    .hero {
+      background: url("hero-cargo.jpg") center / cover no-repeat;
+      min-height: 240px;
+    }
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.45);
+      min-height: 240px;
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Logo + hero banner -->
+  <header class="hero mb-4 d-flex flex-column">
+    <div class="hero-overlay w-100 d-flex flex-column justify-content-center text-center text-white">
+      <img src="logo.png" alt="geeLogistics logo" class="mb-3" style="max-width:160px" />
+      <h1 class="fw-bold">geeLogistics</h1>
+      <p class="lead">Importing quality products from China to Ghana</p>
+    </div>
+  </header>
+
+  <main class="container mb-5">
+
+    <div class="d-grid gap-3 col-10 col-sm-6 col-lg-4 mx-auto mb-5">
+      <a class="btn btn-lg btn-success" href="shop.html">Enter Shop</a>
+    </div>
+
+    <!-- Shipping & Ordering guide -->
+    <section class="mx-auto" style="max-width: 860px">
+      <h2 class="h4">Shipping & Ordering Guide</h2>
+      <ul class="list-group list-group-flush mb-3">
+        <li class="list-group-item">
+          <strong>Sea freight (standard):</strong> 6 – 8 weeks from purchase to arrival at our Accra warehouse.
+        </li>
+        <li class="list-group-item">
+          <strong>Air freight (optional):</strong> 2 – 4 weeks; exact timing varies and will be confirmed case-by-case.
+        </li>
+        <li class="list-group-item">
+          Buyers outside Accra or Kumasi may need to pay for onward conveyance to their doorstep.
+        </li>
+        <li class="list-group-item">
+          Most items include <strong>free shipping to Ghana</strong> unless a surcharge is clearly noted in the description.
+        </li>
+        <li class="list-group-item">
+          <strong>Pre-order payment plan:</strong> 80 % upfront &nbsp;•&nbsp; 20 % on arrival at our Accra warehouse.
+        </li>
+      </ul>
+
+      <p class="mb-1">
+        We’ll alert you if any shipping timeline changes. For live updates:
+      </p>
+      <ul>
+        <li>Refresh this shop periodically for new stock & price changes.</li>
+        <li>Join our WhatsApp group: 
+          <a href="https://chat.whatsapp.com/LbPuTOh6pcbLHQgQS18FYe" target="_blank">click here for regular updates</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="mt-auto text-center py-4 small border-top">
+    © 2025 geeLogistics
+  </footer>
+
+  <!-- Service-worker for PWA -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>

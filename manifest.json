@@ -1,0 +1,11 @@
+{
+  "name": "geeLogistics",
+  "short_name": "geeLogistics",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#198754",
+  "icons": [
+    { "src": "favicon.ico", "sizes": "48x48 64x64 96x96 128x128", "type": "image/x-icon" }
+  ]
+}
