@@ -1,0 +1,47 @@
+######################################
+# Generic operating-system cruft
+######################################
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+######################################
+# Tooling / editor noise
+######################################
+node_modules/        # future JS tooling
+.vscode/
+.idea/
+*.log
+*.swp                # Vim swap files
+__pycache__/         # Python byte-code caches
+
+######################################
+# Environment / secrets
+######################################
+.env
+.env.*               # variants like .env.local
+
+######################################
+# Private admin code  (never pushed)
+######################################
+admin.html
+admin.js
+app.js
+db.js
+admin/**             # if you later move admin files into a folder
+
+######################################
+# Internal data & raw assets
+######################################
+*.csv                # bulk import sheets
+*.xlsx
+raw-images/          # hi-res originals, drafts, etc.
+tmp/
+
+######################################
+# Duplicate / unused public assets
+######################################
+site.webmanifest     # we keep manifest.json instead
