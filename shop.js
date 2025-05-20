@@ -12,17 +12,16 @@ function card(it) {
 
   const imgUrl = it.photos?.[0]
     ? it.photos[0]
-    : `auto-images/${it.id}.jpg`; // fallback
+    : `auto-images/${it.id}.jpg`; // fallback image by ID
 
   const waMsg = encodeURIComponent(
-    `Hello geeLogistics, I'm interested in "${it.name}" for GHS ${price}.`
+    `Hello geeLogistics, I’d like to order:\n\n🛒 *${it.name}*\n💵 Price: GHS ${price}\n\nPlease let me know the next steps.`
   );
 
   return `
     <div class="col-6 col-md-4 col-lg-3 mb-3">
       <div class="card h-100 shadow-sm">
-        <img src="${imgUrl}" class="card-img-top" alt="${it.name}"
-             onerror="this.src='default.png'">
+        <img src="${imgUrl}" class="card-img-top" alt="${it.name}" onerror="this.src='default.png'">
         <div class="card-body p-2">
           <h6 class="card-title">${it.name}</h6>
           <p class="small text-muted">${it.description}</p>
@@ -30,7 +29,7 @@ function card(it) {
           <a class="btn btn-success w-100"
              href="https://wa.me/message/ELHL6MNXBJ2ZN1?text=${waMsg}"
              target="_blank">
-             Order&nbsp;via&nbsp;WhatsApp
+             Order via WhatsApp
           </a>
         </div>
       </div>
